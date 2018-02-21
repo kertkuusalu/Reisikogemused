@@ -1,3 +1,4 @@
+<template>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,9 +13,10 @@
 
     <!-- Bootstrap core CSS -->
     <link href="Stylesheet.css" rel="stylesheet">
-
+	<require from="Stylesheet.css"></require>
     <!-- Custom styles for this template -->
     <link href="dokument.css" rel="stylesheet">
+	<require from="dokument.css"></require>
 
   </head>
 
@@ -29,13 +31,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-              <a class="nav-link" href="#">Search Travel Stories</a>
+              <a class="nav-link" route-href="route: Reisikogemused;">Search Travel Stories</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Log In</a>
+              <a class="nav-link" route-href="route: Login;">Log In</a>
             </li>
 			<li class="nav-item">
-              <a class="nav-link" href="#">Register</a>
+              <a class="nav-link" route-href="route: Register;">Register</a>
             </li>
           </ul>
         </div>
@@ -53,7 +55,7 @@
       <div class="row">
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
           <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="mongol700x400.jpg" alt=""></a>
+            <a href="#"><img class="card-img-top" src="src/mongol700x400.jpg" alt=""></a>
             <div class="card-body">
               <h4 class="card-title">
                 <a href="#">Reis Mongooliasse</a>
@@ -185,3 +187,4 @@
   </body>
 
 </html>
+</template>
