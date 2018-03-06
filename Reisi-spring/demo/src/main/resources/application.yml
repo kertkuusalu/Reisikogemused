@@ -1,0 +1,5 @@
+spring: 
+   datasource:
+      url: jdbc:mariadB://localhost/reisikogemused
+      username: root
+      password: tarkvaratehnika
