@@ -5,10 +5,12 @@ export class App {
         config.title = 'Reisi application';
         config.map([
           { route: ['', 'home'],       name: 'home',       moduleId: 'home/index' },
-          { route: ['Reisikogemused'],            name: 'Reisikogemused',      moduleId: 'Reisikogemused', nav: true},
-          { route: ['Register'], name: 'Register',      moduleId: 'Register', nav: true},
-          { route: ['Login'],            name: 'Login',      moduleId: 'Login', nav: true},
-		  { route: ['NewPost'],            name: 'NewPost',      moduleId: 'NewPost', nav: true}
+          { route: ['Reisikogemused'],            name: 'Reisikogemused',      moduleId: 'Main/Reisikogemused', nav: true},
+          { route: ['Register'], name: 'Register',      moduleId: 'Register/Register', nav: true},
+          { route: ['Login'],            name: 'Login',      moduleId: 'Login/Login', nav: true},
+		  { route: ['NewPost'],            name: 'NewPost',      moduleId: 'NewPost/NewPost', nav: true},
+		  { route: ['posts'],            name: 'posts',      moduleId: 'Posts/posts', nav: true}
+
         ]);
 	}
 }

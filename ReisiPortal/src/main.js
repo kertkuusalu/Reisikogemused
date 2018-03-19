@@ -1,5 +1,12 @@
 import environment from './environment';
 
+Promise.config({
+  longStackTraces: environment.debug,
+  warnings: {
+    wForgottenReturn: false
+  }
+});
+
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
