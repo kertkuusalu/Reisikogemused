@@ -18,5 +18,6 @@ public class Post {
 	String country;
 	String city;
 	String content;
+	String imagePath;
 	
 }
