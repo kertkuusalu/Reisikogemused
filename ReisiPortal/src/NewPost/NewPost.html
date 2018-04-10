@@ -47,24 +47,24 @@
         </div>
       </div>
     </nav>
-<form id = "postForm" submit.delegate="addPost()">
+<form id = "postForm" submit.delegate="addPost()" method="POST">
 <div class="container">
 	<div class="my-4" id = "loginBox">
 	<table>
 	<tr>
-	  <td><textarea name="newsHeader" maxlength="30" class="pealkiri" value.bind="postData.header" placeholder="Add header"></textarea></br></td>
+	  <td><textarea name="newsHeader" maxlength="30" class="pealkiri" value.bind="postData.header" placeholder="Add header" required></textarea></br></td>
 	</tr>
   <tr>
-	  <td><textarea name="newsCountry" maxlength="30" class="pealkiri" value.bind="postData.country" placeholder="Add country"></textarea></br></td>
+	  <td><textarea name="newsCountry" maxlength="30" class="pealkiri" value.bind="postData.country" placeholder="Add country" required></textarea></br></td>
 	</tr>
   <tr>
-	  <td><textarea name="newsCity" maxlength="30" class="pealkiri" value.bind="postData.city" placeholder="Add city"></textarea></br></td>
+	  <td><textarea name="newsCity" maxlength="30" class="pealkiri" value.bind="postData.city" placeholder="Add city" required></textarea></br></td>
 	</tr>
   <tr>
-	  <td></label><input type="file" name="pic" value.bind="postData.image" accept="image/*"><label><b>Add picture</b></br></td>
+	  <td></label><input type="url" name="file" id="file" placeholder="Add image url" value.bind="postData.imagePath" required><label><b></b></br></td>
 	</tr>
 	<tr>
-	  <td><textarea name="newsBox" maxlength="300" class="tekst" value.bind="postData.content" placeholder="Add news text"></textarea><br></td>
+	  <td><textarea name="newsBox" maxlength="300" class="tekst" value.bind="postData.content" placeholder="Add news text" required></textarea><br></td>
 	</tr>
 	<tr>
 	  <td><button type="submit" class="btn btn-success" name="submit">Post</button></td>
