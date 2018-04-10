@@ -1,3 +1,4 @@
+import {RouterConfiguration, NavigationInstruction, Next, Redirect} from 'aurelia-router';
 export class App {
 
 	configureRouter(config, router) {
@@ -9,6 +10,7 @@ export class App {
           { route: ['Register'], name: 'Register',      moduleId: 'Register/Register', nav: true},
           { route: ['Login'],            name: 'Login',      moduleId: 'Login/Login', nav: true},
 		  { route: ['NewPost'],            name: 'NewPost',      moduleId: 'NewPost/NewPost', nav: true},
+		  { route: ['ViewPost'],            name: 'ViewPost',      moduleId: 'ViewPost/ViewPost', nav: true},
 		  { route: ['posts'],            name: 'posts',      moduleId: 'Posts/posts', nav: true}
 
         ]);
