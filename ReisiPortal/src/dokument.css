@@ -30,3 +30,12 @@ body {
 	height:30px;
 	width: 350px;
 }
+.map
+{
+/*    padding:5px;*/
+    float:left;
+    background-image:url('../images/mapContainer.png');
+    width: 155px;
+    height: 123px;
+    background-repeat: no-repeat;
+}
