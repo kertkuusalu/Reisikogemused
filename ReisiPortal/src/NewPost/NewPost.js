@@ -23,12 +23,10 @@ export class NewPost{
 			.then(data => {
 				console.log("server saatis" + data.content);
 				console.log(document.getElementById("file").size);
+			})
+			.then(function(){
+				window.location.href = "/#/ReisiKogemused";
 			});
-		
-		console.log("Method excecuted");
-		setTimeout(function() {
-			window.location.href = "/#/Reisikogemused";
-		}, 500);
 		
 	}
 }

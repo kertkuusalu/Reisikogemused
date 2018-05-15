@@ -8,14 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>4 Col Portfolio - Start Bootstrap Template</title>
+	
 
     <!-- Bootstrap core CSS -->
-    <link href="Stylesheet.css" rel="stylesheet">
 	<require from="Stylesheet.css"></require>
     <!-- Custom styles for this template -->
-    <link href="dokument.css" rel="stylesheet">
+	<require from="dokument.css"></require>
 	<require from="dokument.css"></require>
 	<style>
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -120,7 +118,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
 		  	<li>
-              <a class="nav-link" route-href="route: Reisikogemused;">Search Travel Stories</a>
+              <a class="nav-link" route-href="route: map;">See a map</a>
             </li>
 			<li>
               <a class="nav-link" route-href="route: NewPost;">Add a story</a>
@@ -141,14 +139,50 @@ body {font-family: Arial, Helvetica, sans-serif;}
 	<p></p>
 	<br>
   <h2>${post.header}</h2>
+
   <div class="post.content">
   <p>Country : ${post.country} </br>
   City : ${post.city}</p>
    <div class="panel-body" style='border:1px black solid' >${post.content} </div>	</br>
 	<img  id="imageModal" width="300" height="300" src="${post.imagePath}" alt="">
   </div>
-</div>
+  
 
+	<div class="row">
+        <div class="col-sm-8" id="commentBox">
+			<h3> Comments</h3>
+            <div repeat.for="comment of commentList" class="panel panel-white post panel-shadow">
+                <div class="post-heading">
+                    <div class="pull-left image">
+                    </div>
+                    <div class="pull-left meta">
+                        <div class="title h5">
+						<br>
+                            <b>${comment.title}</b>
+                        </div>
+                    </div>
+                </div> 
+                <div class="post-description"> 
+                    <p>${comment.comment}</p>     
+                </div>
+            </div>
+        </div> 
+    
+<div class="col-md-6">
+	<div class="widget-area no-padding blank">
+		<div class="status-upload">
+				<form id= "postForm" submit.delegate="addComment(post.id)" method="POST">
+					<textarea name="commentHeader" maxlength="30" style="height:70px;" class="pealkiri" value.bind="commentData.title" placeholder="Add title" required></textarea>
+					<textarea name="commentContent" maxlength="500" class="tekst" value.bind="commentData.comment" placeholder="Add a comment to the post" required></textarea>
+					<input type="submit" class="btn btn-success green" value="Add Comment">
+				</form>
+		</div>
+	</div>
+</div>
+        
+
+</div>
+    </div>
 
 </body>
 </html>
