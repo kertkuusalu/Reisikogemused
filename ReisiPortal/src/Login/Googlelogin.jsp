@@ -6,7 +6,7 @@ pageEncoding="ISO-8859-1"%>
    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
    <title>Insert title here</title>
    <script src="https://apis.google.com/js/platform.js" async defer></script>
-   <meta name="google-signin-client_id" content="719472442132-gu0ppq000uibciiu8qurkt08lcieitjv.apps.googleusercontent.com">
+   <meta name="google-signin-client_id" content="719472442132-hu9m0uc7utquru4ldlq4a0m5cf6dou2c.apps.googleusercontent.com">
 </head>
 <body>
    <div class="g-signin2" data-onsuccess="onSignIn" id="myP"></div>
