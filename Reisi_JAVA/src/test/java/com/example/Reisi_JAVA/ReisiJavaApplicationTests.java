@@ -13,4 +13,11 @@ public class ReisiJavaApplicationTests {
 	public void contextLoads() {
 	}
 
+	
+	@Test
+	public void FindAllReturnsSomething() {
+		var postRepository = new PostRepository();
+		
+		assertNotNull(postRepository.findAll());
+	}
 }
