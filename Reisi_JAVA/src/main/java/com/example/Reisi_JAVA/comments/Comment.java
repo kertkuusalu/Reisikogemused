@@ -1,7 +1,6 @@
 package com.example.Reisi_JAVA.comments;
 
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -18,9 +17,19 @@ public class Comment {
 	@Id
 	@GeneratedValue
 	long id;
-	String title;
-	String comment;
+	public String title;
+	public String comment;
 	@ManyToOne
 	Post post;
+	
+	
+	public Comment(String title, String comment) {
+		this.title = title;
+		this.comment = comment;
+	}
+	
+	public Comment(){
+		
+	}
 	
 }

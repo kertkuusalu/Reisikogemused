@@ -2,7 +2,6 @@ import {RouterConfiguration, NavigationInstruction, Next, Redirect} from 'aureli
 
 export class App {
 
-  }
 	configureRouter(config, router) {
         this.router = router;
         config.title = 'Reisi application';

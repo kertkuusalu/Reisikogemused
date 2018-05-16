@@ -5,15 +5,13 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
 import com.example.Reisi_JAVA.comments.Comment;
 
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
 
@@ -21,15 +19,26 @@ public class Post {
 	@Id
 	@GeneratedValue
 	long id;
-	String header;
-	String country;
-	String city;
-	String content;
-	String imagePath;
+	public String header;
+	public String country;
+	public String city;
+	public String content;
+	public String imagePath;
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="post")
 	List<Comment> comments;
 	
+
+	public Post(String header, String country, String city, String content, String imagePath) {
+		this.header = header;
+		this.country = country;
+		this.city = city;
+		this.content = content;
+		this.imagePath = imagePath;
+	}
+	Post(){
+	}
+
 	public void setId (Long i) {
 	    id = i ;
 	} 
@@ -46,9 +55,7 @@ public class Post {
 	public void setContent (String cn) {
 	    content = cn ;
 	} 
-	/*public void setComments (List<Comment> cm) {
-	    comments = cm ;
-	} */
+
 	public void setimagePath (String img ) {
 	    imagePath = img ;
 	} 
