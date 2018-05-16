@@ -8,8 +8,6 @@ export class App {
         config.map([
           { route: ['', 'home'],       name: 'home',       moduleId: 'home/index' },
           { route: ['Reisikogemused'],            name: 'Reisikogemused',      moduleId: 'Main/Reisikogemused', nav: true},
-          { route: ['Register'], name: 'Register',      moduleId: 'Register/Register', nav: true},
-          { route: ['Login'],            name: 'Login',      moduleId: 'Login/Login', nav: true},
 		  { route: ['NewPost'],            name: 'NewPost',      moduleId: 'NewPost/NewPost', nav: true},
 		  { route: ['ViewPost'],            name: 'ViewPost',      moduleId: 'ViewPost/ViewPost', nav: true},
 		  { route: ['posts'],            name: 'posts',      moduleId: 'Posts/posts', nav: true},
